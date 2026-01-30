@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>又松大学｜改革战略雷达（iOS 版）</title>
+  <title>又松大学｜改革战略雷达 Dashboard</title>
   <style>
     :root{
       --bg:#0b1020;
@@ -98,8 +98,8 @@
   <div class="wrap">
     <div class="card">
       <header>
-        <h1>又松大学｜改革战略雷达（iOS 专用版）</h1>
-        <p>此版本改用 <b>SVG</b>（比 Canvas 更稳），在 iPhone/iPad 的 Safari 开启互动效果最佳。</p>
+        <h1>又松大学｜改革战略雷达Dashboard </h1>
+        
       </header>
 
       <div class="main">
@@ -118,8 +118,8 @@
           <span class="chip"><span class="dot red"></span>市场/竞品</span>
 
           <label class="toggle"><input id="showNow" type="checkbox" checked />现况</label>
-          <label class="toggle"><input id="showTarget" type="checkbox" checked />目標</label>
-          <label class="toggle"><input id="showMarket" type="checkbox" checked />市場</label>
+          <label class="toggle"><input id="showTarget" type="checkbox" checked />目标</label>
+          <label class="toggle"><input id="showMarket" type="checkbox" checked />市场</label>
 
           <button id="resetBtn">重置</button>
         </div>
@@ -133,13 +133,11 @@
         </div>
 
         <div class="callout">
-          <b>一句话叙事：</b>我们最大的問題不是貴，而是「貴，卻沒有被设计成值得」——所以改革要把价值做厚、把体验做順、把路径做清。
+          <b>说人话：</b>我们最大的问题不是贵，而是「贵，却没有被设计成值得」——所以改革要把价值做厚、把体验做顺、把路径做清。
         </div>
 
-        <noscript>
-          <div class="noscript">
-            你的浏览器目前未執行 JavaScript，所以互动功能無法啟動。请用 Safari 开启此檔案（分享 → Safari）再試一次。
-          </div>
+  
+      
         </noscript>
       </div>
     </div>
@@ -155,15 +153,15 @@
             <tr>
               <th class="dim">维度</th>
               <th>现况</th>
-              <th>目標</th>
-              <th>市場</th>
+              <th>目标</th>
+              <th>市场</th>
             </tr>
           </thead>
           <tbody></tbody>
         </table>
 
         <div class="callout">
-          <b>简报操作：</b>先只显示「现况 + 市場」→ 再打開「目標」，讓“外擴”成為改革的視覺證據。
+          <b>操作Tip：</b>先只显示「现况 + 市場」→ 再打开「目标」，让“外扩”成为改革的视觉证据。
         </div>
       </div>
     </div>
@@ -172,31 +170,31 @@
 <script>
 const PRESETS = {
   strategic: {
-    labels: ["入学流程体验","學制弹性","专业/路径","服务陪伴","奖学金设计","费用感知(学费)"],
+    labels: ["入学流程体验","学制弹性","专业/路径","服务陪伴","奖学金设计","费用感知(学费)"],
     now:    [2.0, 1.5, 2.0, 2.5, 2.0, 1.0],
     target: [4.0, 4.5, 4.0, 4.5, 4.0, 1.0],
     market: [3.0, 3.0, 3.5, 3.0, 3.0, 3.0]
   },
   ug_3p1: {
-    labels: ["可選专业","入学金優勢","学费優勢","奖学金","留学生服务"],
+    labels: ["可选专业","入学金优势","学费优势","奖学金","留学生服务"],
     now:    [1.0, 1.0, 0.5, 0.5, 0.0],
     target: [3.5, 2.0, 0.5, 2.5, 4.0],
     market: [3.2, 3.5, 4.5, 4.0, 3.0]
   },
   ug_1p3: {
-    labels: ["QS排名","開辦時間","合作院校數量","学费優勢","奖学金優勢"],
+    labels: ["QS排名","开办时间","合作院校数量","学费优势","奖学金优势"],
     now:    [0.0, 4.0, 2.0, 2.0, 3.0],
     target: [2.0, 4.0, 4.0, 2.0, 4.2],
     market: [3.2, 1.5, 4.8, 3.5, 3.8]
   },
   ms_1to1p5: {
-    labels: ["學制","宿舍提供情況","入学金優勢","学费優勢","奖学金優勢"],
+    labels: ["学制","宿舍提供情況","入学金优势","学费优势","奖学金优势"],
     now:    [5.0, 0.0, 1.0, 1.0, 2.0],
     target: [5.0, 3.5, 2.0, 1.0, 4.0],
     market: [4.0, 3.8, 3.5, 4.5, 3.5]
   },
   phd_2to2p5: {
-    labels: ["學制","入学金優勢","学费優勢","奖学金"],
+    labels: ["学制","入学金优势","学费优势","奖学金"],
     now:    [4.0, 2.0, 2.0, 1.0],
     target: [4.5, 2.5, 2.0, 3.5],
     market: [3.0, 4.0, 5.0, 3.5]
